@@ -1,7 +1,7 @@
 /**
- * switch
+ * break
  * continue
- * 
+ * 跳转标签
  */
 
 void main() {
@@ -47,18 +47,19 @@ void main() {
 
   var list2 = [4, 5, 6];
 
+  target: // 标签
   for (var i = 0; i < list1.length; i++) {
     print('-----out-----');
-    
+
     if (list1[i] == 2) {
       continue;
     }
-
+    
     for (var item in list2) {
       if (item == 5) {
-        break;
+        break target; // 跳转标签
       }
-    
+
       print('-----in-----');
       print(item);
     }
